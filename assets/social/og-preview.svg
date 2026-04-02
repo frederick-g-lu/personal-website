@@ -1,0 +1,61 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Frederick Lu Social Preview</title>
+  <desc id="desc">Social sharing preview card with the Rong logo and Frederick Lu branding.</desc>
+
+  <rect width="1200" height="630" fill="#0B1020"/>
+  <rect x="40" y="40" width="1120" height="550" rx="36" fill="#111827" stroke="#1F2937" stroke-width="2"/>
+
+  <circle cx="260" cy="315" r="150" stroke="#DC2626" stroke-width="10"/>
+  <circle cx="260" cy="315" r="134" stroke="#7F1D1D" stroke-width="2"/>
+
+  <text
+    x="260"
+    y="300"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size="150"
+    font-weight="700"
+    fill="#EF4444"
+    font-family="Noto Serif SC, Songti SC, STSong, Source Han Serif SC, serif"
+    letter-spacing="-4"
+  >榮</text>
+
+  <text
+    x="260"
+    y="395"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-size="30"
+    font-weight="500"
+    fill="#F87171"
+    font-family="Noto Serif SC, Songti SC, STSong, Source Han Serif SC, serif"
+    letter-spacing="2"
+  >陸耕愚</text>
+
+  <text
+    x="455"
+    y="282"
+    fill="#F3F4F6"
+    font-family="JetBrains Mono, Segoe UI, Arial, sans-serif"
+    font-size="66"
+    font-weight="700"
+  >Frederick Lu</text>
+
+  <text
+    x="455"
+    y="338"
+    fill="#9CA3AF"
+    font-family="JetBrains Mono, Segoe UI, Arial, sans-serif"
+    font-size="30"
+    font-weight="500"
+  >Computer Science + AI Science</text>
+
+  <text
+    x="455"
+    y="386"
+    fill="#9CA3AF"
+    font-family="JetBrains Mono, Segoe UI, Arial, sans-serif"
+    font-size="24"
+    font-weight="400"
+  >Software Developer | AI Researcher</text>
+</svg>

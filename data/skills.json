@@ -1,0 +1,97 @@
+[
+    {
+        "name": "Python",
+        "icon": "fab fa-python",
+        "level": "Experienced"
+    },
+    {
+        "name": "Java",
+        "icon": "fab fa-java",
+        "level": "Experienced"
+    },
+    {
+        "name": "C++",
+        "icon": "fas fa-code",
+        "level": "Intermediate"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "fab fa-js",
+        "level": "Intermediate"
+    },
+    {
+        "name": "HTML",
+        "icon": "fab fa-html5",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Git",
+        "icon": "fab fa-git-alt",
+        "level": "Intermediate"
+    },
+    {
+        "name": "GitHub",
+        "icon": "fab fa-github",
+        "level": "Experienced"
+    },
+    {
+        "name": "TensorFlow",
+        "icon": "fas fa-brain",
+        "level": "Experienced"
+    },
+    {
+        "name": "AWS",
+        "icon": "fab fa-aws",
+        "level": "Beginner"
+    },
+    {
+        "name": "SQL",
+        "icon": "fas fa-database",
+        "level": "Beginner"
+    },
+    {
+        "name": "FastAPI",
+        "icon": "fas fa-server",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Linux",
+        "icon": "fab fa-linux",
+        "level": "Beginner"
+    },
+    {
+        "name": "Android Studio",
+        "icon": "fab fa-android",
+        "level": "Intermediate"
+    },
+    {
+        "name": "NumPy",
+        "icon": "fas fa-chart-line",
+        "level": "Experienced"
+    },
+    {
+        "name": "Pandas",
+        "icon": "fas fa-table",
+        "level": "Experienced"
+    },
+    {
+        "name": "API Integration",
+        "icon": "fas fa-plug",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Backend Development",
+        "icon": "fas fa-server",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Database Development",
+        "icon": "fas fa-database",
+        "level": "Intermediate"
+    },
+    {
+        "name": "Frontend Development",
+        "icon": "fas fa-server",
+        "level": "Intermediate"
+    }
+]

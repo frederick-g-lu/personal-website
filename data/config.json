@@ -1,0 +1,67 @@
+{
+    "site": {
+        "name": "Frederick Lu",
+        "title": "Double Major Computer Science & AI Science Student & Software Developer",
+        "description": "Frederick Lu - AI Science Student at Purdue University | Software Developer",
+        "author": "Frederick Lu",
+        "email": "lu.g.frederick@gmail.com",
+        "phone": "858-465-0128",
+        "location": "Indianapolis, IN 46202"
+    },
+    "social": {
+        "linkedin": "https://www.linkedin.com/in/frederick-g-lu",
+        "github": "https://github.com/frederick-g-lu",
+        "email": "mailto:lu.g.frederick@gmail.com"
+    },
+    "education": {
+        "university": "Purdue University",
+        "degree": "Bachelor of Science, AI Science, Bachelor of Science, Computer Science",
+        "minor": "Business Management",
+        "graduation": "Class of 2028",
+        "gpa": "3.71 / 4.0",
+        "honors": "John Martinson Honors College - Leadership Council / Mentor",
+        "achievements": "Dean's List & Semester Honors"
+    },
+    "experience": [
+        {
+            "company": "Purdue University",
+            "position": "Peer Tutor",
+            "period": "Jan 2026 - Present",
+            "highlights": [
+                "Teaching students difficult computer science courses that are commonly requested for tutoring.",
+                "Becoming a student leader in computer science and discrete mathematics topics, as well as gaining interpersonal and communication skills."
+            ]
+        },
+        {
+            "company": "Omada AI",
+            "position": "Software Intern",
+            "period": "July - Aug 2025",
+            "highlights": [
+                "Implemented secure OAuth 2.0 integration with Facebook API",
+                "Developed data extraction and link scanning services",
+                "Tested and debugged 800+ lines of code"
+            ]
+        },
+        {
+            "company": "SuperMem Inc.",
+            "position": "Software Intern",
+            "period": "Dec - Jan 2025, Jun - July 2024",
+            "highlights": [
+                "Developed/optimized large-vocabulary voice command recognition neural network models",
+                "Analyzed performance of 10+ hardware platforms for ASR application suitability",
+                "Improved and documented legacy IC testing software",
+                "Built firmware for Microchip PIC18 to interface with 5+ sensor network"
+            ]
+        }
+    ],
+    "theme": {
+        "primaryColor": "#c3b1e1",
+        "secondaryColor": "#b5a0d4",
+        "accentColor": "#e5daf0"
+    },
+    "features": {
+        "enableAnimations": true,
+        "enableParallax": true,
+        "enableDarkMode": true
+    }
+}

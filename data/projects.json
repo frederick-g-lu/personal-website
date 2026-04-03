@@ -1,5 +1,13 @@
 [
     {
+        "title": "Stickman Adblocker",
+        "description": "This is a fun project where I made an adblocker that has a stickman appear to remove your ads. It passes all tests on CanYouBlockIt.com, and has an interactive stickman that you can throw around.",
+        "technologies": ["Node.js", "Javascript", "HTML", "CSS"],
+        "liveUrl": "",
+        "githubUrl": "https://github.com/frederick-g-lu/stickman-adblocker",
+        "year": "2026"
+    },
+    {
         "title": "Hackathon Project",
         "description": "EvacAssist is an app that helps people in crisis areas find other users who have access to vehicles, allowing them to coordinate an evacuation. It shows a path from driver to passenger that avoids conflict zones in the region, has options for disabilities needed, number of passengers, and a live map. On the admin side, there is a web dashboard which allows for a quick overview of all users and current trips made.",
         "technologies": ["Expo", "React", "MongoDB Atlas", "Node.js" , "Express" , "Socket.io", "Flask"],
@@ -12,7 +20,7 @@
         "description": "AI-powered squat counter using pretrained TensorFlow models. Won Best Use of AI/ML Award at Purdue Indy Hackathon 2025. Adapted TensorFlow models to fit project goals, planned and executed a weeklong project plan, continuing previous work on AI in sports and health.",
         "technologies": ["Python", "TensorFlow", "AI/ML", "Computer Vision"],
         "liveUrl": "",
-        "githubUrl": "https://github.com/frederick-g-lu",
+        "githubUrl": "https://github.com/frederick-g-lu/Hackathon-3-27-2025",
         "year": "2025"
     },
     {
@@ -40,19 +48,10 @@
         "year": "2025"
     },
     {
-        "title": "Tic Tac Toe with AI",
-        "description": "Interactive tic tac toe board with GUI and simple AI opponent. Developed using AI agents to quickly implement game logic and user interface.",
-        "technologies": ["Python", "GUI", "Game Development", "AI"],
-        "liveUrl": "",
-        "githubUrl": "https://github.com/frederick-g-lu",
-        "year": "2025"
-    },
-    {
         "title": "Undergraduate Research Paper",
         "description": "Published research paper on an interactive algorithm utilizing a pose detection neural network to help martial arts students improve their forms during solo practice. Featured in Journal of Student Research with almost 400 downloads and 16+ references.",
         "technologies": ["Python", "TensorFlow", "Computer Vision", "Neural Networks", "Human Pose Estimation"],
         "liveUrl": "https://doi.org/10.47611/jsrhs.v12i3.5063",
-        "githubUrl": "https://github.com/frederick-g-lu",
         "year": "2023"
     }
 ]

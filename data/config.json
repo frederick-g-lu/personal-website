@@ -55,9 +55,9 @@
         }
     ],
     "theme": {
-        "primaryColor": "#c3b1e1",
-        "secondaryColor": "#b5a0d4",
-        "accentColor": "#e5daf0"
+        "primaryColor": "#c4a7e7",
+        "secondaryColor": "#9ccfd8",
+        "accentColor": "#eb6f92"
     },
     "features": {
         "enableAnimations": true,

@@ -53,5 +53,13 @@
         "technologies": ["Python", "TensorFlow", "Computer Vision", "Neural Networks", "Human Pose Estimation"],
         "liveUrl": "https://doi.org/10.47611/jsrhs.v12i3.5063",
         "year": "2023"
+    },
+    {
+        "title": "ToolBot",
+        "description": "A 5-degree-of-freedom robotic arm that can identify and sort tools on its own. ToolBot was entirely 3D-printed, with custom gearing to keep it fast and reliable, and a modified YOLO algorithm trained on common workshop tools to handle object recognition in real time. Built as a hackathon project completed in a day and a half with excellent team coordination.",
+        "technologies": ["Robotics", "3D Printing", "YOLO", "Computer Vision", "AI/ML"],
+        "liveUrl": "",
+        "githubUrl": "",
+        "year": "2026"
     }
 ]

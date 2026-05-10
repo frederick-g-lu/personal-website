@@ -220,13 +220,6 @@ body {
     color: var(--primary-color);
 }
 
-.nav-logo {
-    width: 46px;
-    height: 46px;
-    display: block;
-    flex-shrink: 0;
-}
-
 .nav-menu {
     display: flex;
     gap: 2rem;

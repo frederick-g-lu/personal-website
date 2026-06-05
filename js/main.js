@@ -2,9 +2,10 @@
 
 // DOM Elements
 const currentYear = document.getElementById('current-year');
-const skillsGrid = document.getElementById('skills-grid');
+const skillsCategories = document.getElementById('skills-categories');
 const projectsGrid = document.getElementById('projects-grid');
 const experienceContainer = document.getElementById('experience-container');
+const activitiesGrid = document.getElementById('activities-grid');
 const heroTerminalNav = document.getElementById('hero-terminal-nav');
 const heroNavInput = document.getElementById('hero-nav-input');
 
@@ -25,54 +26,51 @@ if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
 }
 
-// ===== Load Skills =====
+// ===== Load Skills (Categorized) =====
 function loadSkills() {
     try {
-        if (!skillsGrid) {
-            console.error('Skills grid element not found');
+        if (!skillsCategories) {
+            console.error('Skills categories element not found');
             return;
         }
 
-        skillsGrid.innerHTML = '';
+        skillsCategories.innerHTML = '';
 
-        const skillsData = [
-            { name: "Python", icon: "fab fa-python", level: "Experienced" },
-            { name: "Java", icon: "fab fa-java", level: "Experienced" },
-            { name: "C++", icon: "fas fa-code", level: "Intermediate" },
-            { name: "JavaScript", icon: "fab fa-js", level: "Intermediate" },
-            { name: "HTML", icon: "fab fa-html5", level: "Intermediate" },
-            { name: "Git", icon: "fab fa-git-alt", level: "Intermediate" },
-            { name: "GitHub", icon: "fab fa-github", level: "Experienced" },
-            { name: "TensorFlow", icon: "fas fa-brain", level: "Experienced" },
-            { name: "AWS", icon: "fab fa-aws", level: "Beginner" },
-            { name: "SQL", icon: "fas fa-database", level: "Beginner" },
-            { name: "FastAPI", icon: "fas fa-server", level: "Intermediate" },
-            { name: "Linux", icon: "fab fa-linux", level: "Beginner" },
-            { name: "Android Studio", icon: "fab fa-android", level: "Intermediate" },
-            { name: "NumPy", icon: "fas fa-chart-line", level: "Experienced" },
-            { name: "Pandas", icon: "fas fa-table", level: "Experienced" },
-            { name: "API Integration", icon: "fas fa-plug", level: "Intermediate" },
-            { name: "Backend Development", icon: "fas fa-server", level: "Intermediate" },
-            { name: "Database Development", icon: "fas fa-database", level: "Intermediate" },
-            { name: "Frontend Development", icon: "fas fa-server", level: "Intermediate" }
-        ];
+        fetch('data/config.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(config => {
+                const skillsData = config.skills || {};
 
-        skillsData.forEach(skill => {
-            const skillCard = document.createElement('div');
-            skillCard.className = 'skill-card';
-            skillCard.innerHTML = `
-                <div class="skill-icon">
-                    <i class="${skill.icon}"></i>
-                </div>
-                <div class="skill-name">${skill.name}</div>
-                <div class="skill-level">${skill.level}</div>
-            `;
-            skillsGrid.appendChild(skillCard);
-        });
+                if (Object.keys(skillsData).length === 0) {
+                    skillsCategories.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No skills data available.</p>';
+                    return;
+                }
+
+                Object.entries(skillsData).forEach(([category, skills]) => {
+                    const categoryCard = document.createElement('div');
+                    categoryCard.className = 'skill-category';
+                    categoryCard.innerHTML = `
+                        <h3 class="skill-category-title">${category}</h3>
+                        <div class="skill-list">
+                            ${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}
+                        </div>
+                    `;
+                    skillsCategories.appendChild(categoryCard);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading skills:', error);
+                if (skillsCategories) {
+                    skillsCategories.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load skills.</p>';
+                }
+            });
     } catch (error) {
         console.error('Error loading skills:', error);
-        if (skillsGrid) {
-            skillsGrid.innerHTML = '<p style="color: var(--text-muted);">Unable to load skills.</p>';
+        if (skillsCategories) {
+            skillsCategories.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load skills.</p>';
         }
     }
 }
@@ -184,23 +182,70 @@ function loadProjects() {
     }
 }
 
-// ===== Hero Terminal Navigation =====
+// ===== Load Activities =====
+function loadActivities() {
+    try {
+        if (!activitiesGrid) {
+            console.error('Activities grid element not found');
+            return;
+        }
+
+        activitiesGrid.innerHTML = '';
+
+        fetch('data/config.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(config => {
+                const activitiesData = config.activities || [];
+
+                if (activitiesData.length === 0) {
+                    activitiesGrid.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No activities data available.</p>';
+                    return;
+                }
+
+                activitiesData.forEach(activity => {
+                    const activityCard = document.createElement('div');
+                    activityCard.className = 'activity-card';
+                    activityCard.innerHTML = `
+                        <h3 class="activity-title">${activity.title}</h3>
+                        <p class="activity-description">${activity.description}</p>
+                    `;
+                    activitiesGrid.appendChild(activityCard);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading activities:', error);
+                if (activitiesGrid) {
+                    activitiesGrid.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load activities.</p>';
+                }
+            });
+    } catch (error) {
+        console.error('Error loading activities:', error);
+        if (activitiesGrid) {
+            activitiesGrid.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load activities.</p>';
+        }
+    }
+}
 function setupHeroTerminalNav() {
     if (!heroTerminalNav || !heroNavInput) return;
 
-    const defaultPlaceholder = 'type: home, about, education, experience, skills, projects, contact';
+    const defaultPlaceholder = 'type: home, about, skills, projects, experience, education, activities, contact';
     heroNavInput.placeholder = defaultPlaceholder;
 
     const aliases = {
         home: 'home',
         about: 'about',
-        education: 'education',
-        school: 'education',
-        experience: 'experience',
-        work: 'experience',
         skills: 'skills',
         projects: 'projects',
         project: 'projects',
+        experience: 'experience',
+        work: 'experience',
+        education: 'education',
+        school: 'education',
+        activities: 'activities',
+        interests: 'activities',
         contact: 'contact',
         email: 'contact'
     };
@@ -242,6 +287,7 @@ function initialize() {
         loadSkills();
         loadExperience();
         loadProjects();
+        loadActivities();
         setupHeroTerminalNav();
 
         if (typeof initScrollAnimations === 'function') {

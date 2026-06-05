@@ -17,20 +17,31 @@ personal-website/
 │   ├── main.js                    # Core functionality (data loading, interactions)
 │   └── animations.js              # Scroll and hover animations
 │
-├── data/
-│   ├── config.json                # Experience data & site configuration
-│   ├── projects.json              # Portfolio projects data
-│   └── skills.json                # Skills reference (currently embedded in main.js)
+└── data/
+    ├── config.json                # Experience, skills, activities, site config
+    ├── projects.json              # Portfolio projects data
+    └── skills.json                # Skills reference (legacy)
 ```
 
 ## Architecture
 
 - **Zero dependencies** — pure HTML, CSS, and vanilla JavaScript
-- **Data-driven** — content loaded from JSON files (`config.json`, `projects.json`)
+- **Data-driven** — content loaded from JSON files (config.json, projects.json)
 - **GitHub Pages ready** — fully static, relative paths for any deployment folder
 - **Performance-optimized** — minimal CSS, efficient DOM updates
 - **Accessible** — semantic HTML, ARIA labels, keyboard navigation
 - **Responsive** — mobile-first design from 480px to 1920px+
+
+## Section Order
+
+1. **Hero** — Terminal UI navigation
+2. **About** — Brief personal introduction
+3. **Skills** — Categorized by Languages, AI/ML, Backend, Tools, Domains
+4. **Projects** — Portfolio projects with technologies and links
+5. **Experience** — Professional and volunteer experience
+6. **Education** — Academic credentials and achievements
+7. **Activities** — Personal interests and hobbies
+8. **Contact** — Social links
 
 ## Development
 

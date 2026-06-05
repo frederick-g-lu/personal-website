@@ -16,7 +16,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 function initScrollAnimations() {
-    const animateElements = document.querySelectorAll('.skill-card, .project-card, .about-text, .experience-card');
+    const animateElements = document.querySelectorAll('.skill-category, .project-card, .about-text, .experience-card, .activity-card');
 
     animateElements.forEach(el => {
         el.style.opacity = '0';

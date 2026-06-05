@@ -54,6 +54,27 @@
             ]
         }
     ],
+    "skills": {
+        "Languages": ["Python", "Java", "C++", "JavaScript", "HTML"],
+        "AI/ML": ["TensorFlow", "NumPy", "Pandas"],
+        "Backend": ["FastAPI", "SQL"],
+        "Tools": ["Git", "GitHub", "AWS", "Linux", "Android Studio"],
+        "Domains": ["API Integration", "Backend Development", "Database Development", "Frontend Development"]
+    },
+    "activities": [
+        {
+            "title": "Martial Arts",
+            "description": "10+ years of martial arts experience"
+        },
+        {
+            "title": "Hiking",
+            "description": "Outdoor enthusiast and nature lover"
+        },
+        {
+            "title": "Game Development",
+            "description": "Aspiring game developer passionate about interactive experiences"
+        }
+    ],
     "theme": {
         "primaryColor": "#c4a7e7",
         "secondaryColor": "#9ccfd8",

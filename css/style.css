@@ -393,46 +393,50 @@ section {
 }
 
 /* ===== Skills Section ===== */
-.skills-grid {
+.skills-categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.skill-card {
+.skill-category {
     background: var(--bg-card);
     padding: 2rem;
     border-radius: 10px;
-    text-align: center;
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     border: 1px solid var(--border-color);
 }
 
-.skill-card:hover {
+.skill-category:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     background: var(--bg-card-hover);
     border-color: var(--primary-color);
 }
 
-.skill-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.skill-name {
-    font-size: 1.2rem;
+.skill-category-title {
+    font-size: 1.3rem;
     font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
-.skill-level {
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background: var(--bg-darker);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
     font-size: 0.9rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
 }
 
 /* ===== Projects Section ===== */
@@ -562,6 +566,48 @@ section {
     border-color: var(--primary-color);
 }
 
+/* ===== Activities Section ===== */
+.activities {
+    background: var(--bg-darker);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.activity-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-card-hover);
+    border-color: var(--primary-color);
+}
+
+.activity-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.activity-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
 /* ===== Footer ===== */
 .footer {
     background: var(--bg-darker);
@@ -601,7 +647,7 @@ section {
         padding: 0 1rem;
     }
 
-    .skills-grid,
+    .skills-categories,
     .projects-grid {
         grid-template-columns: 1fr;
     }

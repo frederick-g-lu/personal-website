@@ -62,7 +62,7 @@
                             type="text"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="type a section: about, education, experience, skills, projects, contact"
+                            placeholder="type a section: about, skills, projects, experience, education, activities, contact"
                         >
                     </form>
                 </div>
@@ -75,34 +75,28 @@
                 <h2 class="section-title">About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I'm a sophomore at Purdue University pursuing a Bachelor of Science in AI Science as well as a Bachelor of Science in Computer Science with a minor in Business Management (Class of 2028). Currently maintaining a 3.65 GPA and actively involved in the John Martinson Honors College as a Leadership Council member and mentor.</p>
-                        <p>I'm currently a Peer Tutor for Computer Science and Discrete Mathematics courses, helping students understand difficult concepts and improve their problem-solving skills.</p>
-                        <p>With experience in software development, AI/ML, and backend systems, I've worked as a Software Intern at Omada AI and SuperMem Inc., contributing to real-world projects involving OAuth integration, neural network optimization, and firmware development.</p>
-                        <p>Beyond coding, I'm fluent in Chinese, have 10+ years of martial arts experience, and enjoy hiking. I'm also an aspiring game developer passionate about applying computer science and artificial intelligence to solve challenging problems.</p>
+                        <p>I'm a sophomore at Purdue University pursuing dual degrees in AI Science and Computer Science with a minor in Business Management (Class of 2028). With experience in software development, AI/ML, and backend systems, I'm passionate about applying computer science and artificial intelligence to solve challenging real-world problems.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
-        <section id="education" class="education">
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
             <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="education-content">
-                    <div class="education-card">
-                        <h3>Purdue University</h3>
-                        <p class="education-degree">Bachelor of Science, AI Science</p>
-                        <p class="education-minor">Minor: Business Management</p>
-                        <p class="education-location">Indianapolis, IN | Class of 2028</p>
-                        <p class="education-gpa"><strong>GPA:</strong> 3.65 / 4.0</p>
-                        <div class="education-honors">
-                            <p><strong>Honors & Achievements:</strong></p>
-                            <ul>
-                                <li>John Martinson Honors College - Leadership Council / Mentor</li>
-                                <li>Dean's List & Semester Honors</li>
-                            </ul>
-                        </div>
-                    </div>
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-categories" id="skills-categories">
+                    <!-- Skills will be dynamically loaded and categorized from config.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Projects will be dynamically loaded from projects.json -->
                 </div>
             </div>
         </section>
@@ -117,22 +111,35 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills">
+        <!-- Education Section -->
+        <section id="education" class="education">
             <div class="container">
-                <h2 class="section-title">Skills</h2>
-                <div class="skills-grid" id="skills-grid">
-                    <!-- Skills will be dynamically loaded from skills.json -->
+                <h2 class="section-title">Education</h2>
+                <div class="education-content">
+                    <div class="education-card">
+                        <h3>Purdue University</h3>
+                        <p class="education-degree">Bachelor of Science, AI Science</p>
+                        <p class="education-minor">Minor: Business Management</p>
+                        <p class="education-location">Indianapolis, IN | Class of 2028</p>
+                        <p class="education-gpa"><strong>GPA:</strong> <span id="education-gpa">3.71 / 4.0</span></p>
+                        <div class="education-honors">
+                            <p><strong>Honors & Achievements:</strong></p>
+                            <ul>
+                                <li>John Martinson Honors College - Leadership Council / Mentor</li>
+                                <li>Dean's List & Semester Honors</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects">
+        <!-- Activities Section -->
+        <section id="activities" class="activities">
             <div class="container">
-                <h2 class="section-title">Projects</h2>
-                <div class="projects-grid" id="projects-grid">
-                    <!-- Projects will be dynamically loaded from projects.json -->
+                <h2 class="section-title">Interests & Activities</h2>
+                <div class="activities-grid" id="activities-grid">
+                    <!-- Activities will be dynamically loaded from config.json -->
                 </div>
             </div>
         </section>

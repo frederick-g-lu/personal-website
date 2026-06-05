@@ -21,10 +21,6 @@ personal-website/
 │   ├── config.json                # Experience data & site configuration
 │   ├── projects.json              # Portfolio projects data
 │   └── skills.json                # Skills reference (currently embedded in main.js)
-│
-└── assets/
-    ├── logos/                     # Logo and brand assets
-    └── social/                    # Social sharing assets (OG images)
 ```
 
 ## Architecture

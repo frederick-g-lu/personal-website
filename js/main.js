@@ -3,8 +3,9 @@
 // DOM Elements
 const currentYear = document.getElementById('current-year');
 const skillsCategories = document.getElementById('skills-categories');
-const projectsGrid = document.getElementById('projects-grid');
-const experienceContainer = document.getElementById('experience-container');
+const projectsList = document.getElementById('projects-list');
+const experienceList = document.getElementById('experience-list');
+const publicationsList = document.getElementById('publications-list');
 const activitiesGrid = document.getElementById('activities-grid');
 const heroTerminalNav = document.getElementById('hero-terminal-nav');
 const heroNavInput = document.getElementById('hero-nav-input');
@@ -78,12 +79,12 @@ function loadSkills() {
 // ===== Load Experience =====
 function loadExperience() {
     try {
-        if (!experienceContainer) {
-            console.error('Experience container element not found');
+        if (!experienceList) {
+            console.error('Experience list element not found');
             return;
         }
 
-        experienceContainer.innerHTML = '';
+        experienceList.innerHTML = '';
 
         fetch('data/config.json')
             .then(response => {
@@ -94,38 +95,38 @@ function loadExperience() {
                 const experienceData = config.experience || [];
 
                 if (experienceData.length === 0) {
-                    experienceContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No experience data available.</p>';
+                    experienceList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No experience data available.</p>';
                     return;
                 }
 
                 experienceData.forEach(exp => {
-                    const experienceCard = document.createElement('div');
-                    experienceCard.className = 'experience-card';
-                    experienceCard.innerHTML = `
-                        <div class="experience-header">
+                    const experienceItem = document.createElement('div');
+                    experienceItem.className = 'experience-item';
+                    experienceItem.innerHTML = `
+                        <div class="experience-meta">
                             <h3 class="experience-position">${exp.position}</h3>
-                            <h4 class="experience-company">${exp.company}</h4>
+                            <p class="experience-company">${exp.company}</p>
                             <p class="experience-period">${exp.period}</p>
                         </div>
-                        <div class="experience-highlights">
+                        <div class="experience-details">
                             <ul>
                                 ${exp.highlights.map(highlight => `<li>${highlight}</li>`).join('')}
                             </ul>
                         </div>
                     `;
-                    experienceContainer.appendChild(experienceCard);
+                    experienceList.appendChild(experienceItem);
                 });
             })
             .catch(error => {
                 console.error('Error loading experience:', error);
-                if (experienceContainer) {
-                    experienceContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load experience.</p>';
+                if (experienceList) {
+                    experienceList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load experience.</p>';
                 }
             });
     } catch (error) {
         console.error('Error loading experience:', error);
-        if (experienceContainer) {
-            experienceContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load experience.</p>';
+        if (experienceList) {
+            experienceList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load experience.</p>';
         }
     }
 }
@@ -133,12 +134,12 @@ function loadExperience() {
 // ===== Load Projects =====
 function loadProjects() {
     try {
-        if (!projectsGrid) {
-            console.error('Projects grid element not found');
+        if (!projectsList) {
+            console.error('Projects list element not found');
             return;
         }
 
-        projectsGrid.innerHTML = '';
+        projectsList.innerHTML = '';
 
         fetch('data/projects.json')
             .then(response => {
@@ -147,42 +148,93 @@ function loadProjects() {
             })
             .then(projectsData => {
                 projectsData.forEach(project => {
-                    const projectCard = document.createElement('div');
-                    projectCard.className = 'project-card';
-                    projectCard.innerHTML = `
-                        <div class="project-image">
-                            <i class="${project.icon || 'fas fa-code'}"></i>
-                        </div>
-                        <div class="project-content">
+                    const projectItem = document.createElement('div');
+                    projectItem.className = 'project-item';
+                    projectItem.innerHTML = `
+                        <div class="project-header">
                             <h3 class="project-title">${project.title}</h3>
-                            <p class="project-description">${project.description}</p>
-                            <div class="project-tech">
-                                ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
-                            </div>
-                            <div class="project-links">
-                                ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>` : ''}
-                                ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>` : ''}
-                            </div>
+                            <p class="project-year">${project.year}</p>
+                        </div>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-tech">
+                            ${project.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        <div class="project-links">
+                            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link">Live Demo</a>` : ''}
+                            ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>` : ''}
                         </div>
                     `;
-                    projectsGrid.appendChild(projectCard);
+                    projectsList.appendChild(projectItem);
                 });
             })
             .catch(error => {
                 console.error('Error loading projects:', error);
-                if (projectsGrid) {
-                    projectsGrid.innerHTML = '<p style="color: var(--text-muted);">Unable to load projects.</p>';
+                if (projectsList) {
+                    projectsList.innerHTML = '<p style="color: var(--text-muted);">Unable to load projects.</p>';
                 }
             });
     } catch (error) {
         console.error('Error loading projects:', error);
-        if (projectsGrid) {
-            projectsGrid.innerHTML = '<p style="color: var(--text-muted);">Unable to load projects.</p>';
+        if (projectsList) {
+            projectsList.innerHTML = '<p style="color: var(--text-muted);">Unable to load projects.</p>';
         }
     }
 }
 
-// ===== Load Activities =====
+// ===== Load Publications =====
+function loadPublications() {
+    try {
+        if (!publicationsList) {
+            console.error('Publications list element not found');
+            return;
+        }
+
+        publicationsList.innerHTML = '';
+
+        fetch('data/publications.json')
+            .then(response => {
+                if (!response.ok) throw new Error('Network response was not ok');
+                return response.json();
+            })
+            .then(publicationsData => {
+                if (publicationsData.length === 0) {
+                    publicationsList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No publications available.</p>';
+                    return;
+                }
+
+                publicationsData.forEach(pub => {
+                    const pubItem = document.createElement('div');
+                    pubItem.className = 'publication-item';
+                    pubItem.innerHTML = `
+                        <div class="publication-header">
+                            <h3 class="publication-title">${pub.title}</h3>
+                            <p class="publication-year">${pub.year}</p>
+                        </div>
+                        <p class="publication-journal"><strong>${pub.journal}</strong></p>
+                        <p class="publication-description">${pub.description}</p>
+                        <div class="publication-tech">
+                            ${pub.technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                        </div>
+                        <div class="publication-links">
+                            ${pub.url ? `<a href="${pub.url}" target="_blank" rel="noopener noreferrer" class="publication-link">Read Paper</a>` : ''}
+                        </div>
+                    `;
+                    publicationsList.appendChild(pubItem);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading publications:', error);
+                if (publicationsList) {
+                    publicationsList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load publications.</p>';
+                }
+            });
+    } catch (error) {
+        console.error('Error loading publications:', error);
+        if (publicationsList) {
+            publicationsList.innerHTML = '<p style="color: var(--text-muted); text-align: center;">Unable to load publications.</p>';
+        }
+    }
+}
 function loadActivities() {
     try {
         if (!activitiesGrid) {
@@ -231,15 +283,17 @@ function loadActivities() {
 function setupHeroTerminalNav() {
     if (!heroTerminalNav || !heroNavInput) return;
 
-    const defaultPlaceholder = 'type: home, about, skills, projects, experience, education, activities, contact';
+    const defaultPlaceholder = 'type: skills, projects, publications, experience, education, activities, contact';
     heroNavInput.placeholder = defaultPlaceholder;
 
     const aliases = {
         home: 'home',
-        about: 'about',
         skills: 'skills',
         projects: 'projects',
         project: 'projects',
+        publications: 'publications',
+        papers: 'publications',
+        research: 'publications',
         experience: 'experience',
         work: 'experience',
         education: 'education',
@@ -285,8 +339,9 @@ if (document.readyState === 'loading') {
 function initialize() {
     setTimeout(() => {
         loadSkills();
-        loadExperience();
         loadProjects();
+        loadPublications();
+        loadExperience();
         loadActivities();
         setupHeroTerminalNav();
 

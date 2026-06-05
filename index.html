@@ -53,6 +53,9 @@
                     <h1 class="hero-title">Hi, I'm <span class="highlight">Frederick Lu</span></h1>
                     <p class="hero-subtitle">Double Major Computer Science & AI Science Student & Software Developer</p>
                     <p class="hero-description">Integrating computer science and artificial intelligence to solve real-world problems</p>
+                    <div class="about-text" style="max-width: 800px; margin: 2rem auto 0; text-align: left; font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+                        <p>I'm a sophomore at Purdue University pursuing dual degrees in AI Science and Computer Science with a minor in Business Management (Class of 2028). With experience in software development, AI/ML, and backend systems, I'm passionate about applying computer science and artificial intelligence to solve challenging real-world problems.</p>
+                    </div>
                     <form class="hero-terminal-nav" id="hero-terminal-nav" aria-label="Jump to section">
                         <label for="hero-nav-input" class="hero-terminal-label">jump:</label>
                         <span class="hero-terminal-prompt" aria-hidden="true">&gt;</span>
@@ -62,21 +65,9 @@
                             type="text"
                             autocomplete="off"
                             spellcheck="false"
-                            placeholder="type a section: about, skills, projects, experience, education, activities, contact"
+                            placeholder="type a section: skills, projects, publications, experience, education, activities, contact"
                         >
                     </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Me</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>I'm a sophomore at Purdue University pursuing dual degrees in AI Science and Computer Science with a minor in Business Management (Class of 2028). With experience in software development, AI/ML, and backend systems, I'm passionate about applying computer science and artificial intelligence to solve challenging real-world problems.</p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -95,8 +86,18 @@
         <section id="projects" class="projects">
             <div class="container">
                 <h2 class="section-title">Projects</h2>
-                <div class="projects-grid" id="projects-grid">
+                <div class="projects-list" id="projects-list">
                     <!-- Projects will be dynamically loaded from projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="publications">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <div class="publications-list" id="publications-list">
+                    <!-- Publications will be dynamically loaded from publications.json -->
                 </div>
             </div>
         </section>
@@ -105,7 +106,7 @@
         <section id="experience" class="experience">
             <div class="container">
                 <h2 class="section-title">Experience</h2>
-                <div class="experience-container" id="experience-container">
+                <div class="experience-list" id="experience-list">
                     <!-- Experience will be dynamically loaded from config.json -->
                 </div>
             </div>

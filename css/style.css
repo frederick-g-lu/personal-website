@@ -1,17 +1,17 @@
 /* ===== CSS Variables ===== */
 :root {
-    --primary-color: #c4a7e7;
-    --secondary-color: #9ccfd8;
-    --accent-color: #eb6f92;
-    --text-primary: #e0def4;
-    --text-secondary: #c4a7e7;
-    --text-muted: #908caa;
-    --bg-dark: #232136;
-    --bg-darker: #2a273f;
-    --bg-card: #393552;
-    --bg-card-hover: #44415a;
-    --border-color: #56526e;
-    --text-on-accent: #232136;
+    --primary-color: #b16286;
+    --secondary-color: #689d6a;
+    --accent-color: #d65d0e;
+    --text-primary: #ebdbb2;
+    --text-secondary: #d79921;
+    --text-muted: #a89984;
+    --bg-dark: #282828;
+    --bg-darker: #3c3836;
+    --bg-card: #504945;
+    --bg-card-hover: #665c54;
+    --border-color: #7c6f64;
+    --text-on-accent: #282828;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
